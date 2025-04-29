@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Black dos Streamings Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        .matte-black {
+            background-color: #121212;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+        .logo-bg {
+            position: absolute;
+            opacity: 0.15;
+            filter: blur(8px);
+            z-index: 0;
+        }
+        .content-layer {
+            position: relative;
+            z-index: 1;
+        }
+        .platform-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .platform-card:hover {
+            transform: translateY(-5px);
+            background: rgba(50, 50, 50, 0.7);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .price-tag {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        .faq-item {
+            background: rgba(30, 30, 30, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        .faq-item:hover {
+            background: rgba(50, 50, 50, 0.7);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+        .btn-secondary {
+            background: rgba(30, 30, 30, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(50, 50, 50, 0.7);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Background Logos -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg" class="logo-bg" style="top: 10%; left: 5%; width: 120px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="logo-bg" style="top: 70%; left: 80%; width: 100px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" class="logo-bg" style="top: 30%; left: 85%; width: 150px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg" class="logo-bg" style="top: 80%; left: 15%; width: 90px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Amazon_Prime_Video_logo.svg" class="logo-bg" style="top: 15%; left: 75%; width: 130px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" class="logo-bg" style="top: 65%; left: 20%; width: 140px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Disney_Plus_logo.svg" class="logo-bg" style="top: 40%; left: 10%; width: 120px;">
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden">
+        <div class="matte-black py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto content-layer">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 glow-text">LISTA BLACK<br>DOS STREAMINGS PREMIUM</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Transforme seu celular em uma máquina de renda extra com acesso aos melhores streamings</p>
+                    
+                    <div class="max-w-2xl mx-auto bg-black bg-opacity-50 rounded-xl p-8 mb-8 border border-gray-800">
+                        <p class="text-lg md:text-xl mb-6">Acesso vitalício por apenas <span class="text-blue-400 font-bold">R$47,00</span> ou revenda com até <span class="text-purple-400 font-bold">400% de lucro</span>!</p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#comprar" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg">
+                                <i class="fas fa-shopping-cart mr-2"></i> Quero Comprar Agora
+                            </a>
+                            <a href="#detalhes" class="btn-secondary text-white font-bold py-3 px-8 rounded-full text-lg">
+                                <i class="fas fa-info-circle mr-2"></i> Saiba Mais
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <div class="animate-bounce text-2xl">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platforms Section -->
+    <div id="detalhes" class="relative py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto content-layer">
+            <h2 class="text-3xl font-bold text-center mb-12 glow-text">ACESSO ÀS MELHORES PLATAFORMAS</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Netflix -->
+                <div class="platform-card rounded-xl p-4">
+                    <div class="bg-black bg-opacity-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fab fa-netflix text-red-600 text-3xl"></i>
+                    </div>
+                    <p class="text-center font-medium">Netflix</p>
+                </div>
+                
+                <!-- Spotify -->
+                <div class="platform-card rounded-xl p-4">
+                    <div class="bg-black bg-opacity-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fab fa-spotify text-green-500 text-3xl"></i>
+                    </div>
+                    <p class="text-center font-medium">Spotify</p>
+                </div>
+                
+                <!-- Disney+ -->
+                <div class="platform-card rounded-xl p-4">
+                    <div class="bg-black bg-opacity-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fab fa-disney text-blue-400 text-3xl"></i>
+                    </div>
+                    <p class="text-center font-medium">Disney+</p>
+                </div>
+                
+                <!-- YouTube Premium -->
+                <div class="platform-card rounded-xl p-4">
+                    <div class="bg-black bg-opacity-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fab fa-youtube text-red-500 text-3xl"></i>
+                    </div>
+                    <p class="text-center font-medium">YouTube Premium</p>
+                </div>
+                
+                <!-- Amazon Prime -->
+                <div class="platform-card rounded-xl p-4">
+                    <div class="bg-black bg-opacity-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fab fa-amazon text-blue-300 text-3xl"></i>
+                    </div>
+                    <p class="text-center font-medium">Prime Video</p>
+                </div>
+                
+                <!-- HBO Max -->
+                <div class="platform-card rounded-xl p-4">
+                    <div class="bg-black bg-opacity-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-tv text-purple-400 text-3xl"></i>
+                    </div>
+                    <p class="text-center font-medium">HBO Max</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <p class="text-xl">E muito mais: Star+, Paramount+, GloboPlay, UFC Fight Pass, Deezer, Tidal, Apple TV+ e outros!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-50">
+        <div class="max-w-7xl mx-auto content-layer">
+            <h2 class="text-3xl font-bold text-center mb-12 glow-text">COMO FUNCIONA?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="platform-card rounded-xl p-8">
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">ADQUIRA A LISTA BLACK</h3>
+                    <p class="text-gray-300">Receba acesso exclusivo aos fornecedores secretos com preços a partir de R$3,00 por streaming.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="platform-card rounded-xl p-8">
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">USE OU REVENDA</h3>
+                    <p class="text-gray-300">Aproveite para seu próprio consumo ou revenda com lucros de até 400% (R$3,00 → R$15,00).</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="platform-card rounded-xl p-8">
+                    <div class="bg-gradient-to-r from-pink-600 to-red-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">GANHE DINHEIRO TODO MÊS</h3>
+                    <p class="text-gray-300">Streamings são serviços recorrentes - seus clientes renovam mensalmente!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profit Calculator -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto content-layer">
+            <h2 class="text-3xl font-bold text-center mb-8 glow-text">SIMULE SEU LUCRO</h2>
+            
+            <div class="platform-card rounded-xl p-8 max-w-3xl mx-auto">
+                <div class="mb-8">
+                    <label class="block text-gray-300 mb-3 text-lg">Quantidade de Clientes</label>
+                    <input type="range" min="10" max="200" step="10" value="50" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer" id="clientRange">
+                    <div class="flex justify-between mt-3 text-gray-300">
+                        <span>10</span>
+                        <span id="clientValue" class="font-bold text-white">50</span>
+                        <span>200</span>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <label class="block text-gray-300 mb-3 text-lg">Serviços por Cliente</label>
+                    <input type="range" min="1" max="5" step="1" value="2" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer" id="serviceRange">
+                    <div class="flex justify-between mt-3 text-gray-300">
+                        <span>1</span>
+                        <span id="serviceValue" class="font-bold text-white">2</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-900 to-purple-900 p-6 rounded-lg border border-gray-700">
+                    <h3 class="font-semibold text-xl mb-3">SEU LUCRO MENSAL ESTIMADO</h3>
+                    <p class="text-4xl font-bold text-white" id="profitValue">R$600,00</p>
+                    <p class="text-sm text-gray-300 mt-2">Baseado em R$12,00 de lucro por serviço</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-70">
+        <div class="max-w-7xl mx-auto content-layer">
+            <h2 class="text-3xl font-bold text-center mb-12 glow-text">QUEM JÁ ESTÁ LUCRANDO</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="platform-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="font-bold text-white">M</span>
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Marcelo S.</p>
+                            <p class="text-sm text-gray-400">São Paulo/SP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Em 3 meses já tenho 85 clientes fixos. Ganho R$1.020,00 todo mês só renovando os acessos!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="platform-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="font-bold text-white">A</span>
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Ana L.</p>
+                            <p class="text-sm text-gray-400">Belo Horizonte/MG</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Uso para minha família e revendo para amigos. Economizo R$300,00 por mês e ainda lucro R$500,00!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="platform-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-pink-600 to-red-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="font-bold text-white">R</span>
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Ricardo F.</p>
+                            <p class="text-sm text-gray-400">Porto Alegre/RS</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Melhor investimento que fiz! Em 6 meses transformei em meu principal negócio. Faturamento médio de R$3.600,00/mês."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bonus Section -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto content-layer">
+            <h2 class="text-3xl font-bold text-center mb-8 glow-text">BÔNUS EXCLUSIVO</h2>
+            
+            <div class="platform-card rounded-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-black bg-opacity-50 flex items-center justify-center p-8">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Ebook" class="w-40 h-40 object-contain">
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-2xl font-bold mb-6">GUIA DE VENDAS E FIDELIZAÇÃO</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Como vender mais rápido para amigos e familiares</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Estratégias para redes sociais que realmente funcionam</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Técnicas para fidelizar clientes e garantir renovações</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Modelos de mensagens prontas para usar</span>
+                            </li>
+                        </ul>
+                        <p class="font-semibold text-lg">Valor do bônus: <span class="line-through text-gray-400">R$97,00</span> <span class="text-green-500">HOJE GRÁTIS</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div id="comprar" class="relative py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-80">
+        <div class="max-w-5xl mx-auto content-layer text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 glow-text">PRONTO PARA TRANSFORMAR SEU CELULAR EM UMA MÁQUINA DE RENDA EXTRA?</h2>
+            <p class="text-xl mb-10">Acesso vitalício + Atualizações gratuitas + Bônus exclusivo</p>
+            
+            <div class="platform-card rounded-xl p-8 max-w-3xl mx-auto">
+                <div class="flex flex-col items-center mb-8">
+                    <span class="text-5xl font-bold mb-2">R$47,00</span>
+                    <span class="px-4 py-1 bg-gradient-to-r from-red-600 to-pink-600 text-white text-sm font-bold rounded-full">OFERTA POR TEMPO LIMITADO</span>
+                </div>
+                
+                <ul class="space-y-4 mb-10 text-left max-w-md mx-auto">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span>Lista completa de 15+ fornecedores secretos</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span>Acesso a todas as plataformas de streaming</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span>Preços a partir de R$3,00 por serviço</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span>Bônus: Guia de Vendas e Fidelização</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span>Atualizações gratuitas para sempre</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                    </li>
+                </ul>
+                
+                <a href="#" class="btn-primary text-white font-bold py-4 px-12 rounded-full text-xl inline-block mb-6">
+                    <i class="fas fa-shopping-cart mr-2"></i> QUERO ACESSO IMEDIATO
+                </a>
+                
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Secure Payment" class="h-8">
+                    <span class="text-sm text-gray-300">Pagamento 100% seguro</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto content-layer">
+            <h2 class="text-3xl font-bold text-center mb-12 glow-text">PERGUNTAS FREQUENTES</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-medium">É legal? Posso ter problemas?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-300">Os acessos são compartilhados de forma semelhante ao que as próprias plataformas permitem (como planos familiares). Você estará revendendo acesso a contas oficiais, não é pirataria. Milhares de pessoas fazem isso há anos sem problemas.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-medium">Quanto tempo dura o acesso que eu comprar?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-300">Você compra acesso vitalício à lista de fornecedores. Os acessos individuais aos streamings são mensais (como os serviços originais), mas você pode renovar pelos mesmos preços baixos.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-medium">Como recebo os acessos após comprar?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-300">Imediatamente após a confirmação do pagamento, você recebe um e-mail com acesso à área de membros contendo toda a lista de fornecedores, tutoriais e bônus.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-medium">E se algum fornecedor parar de funcionar?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-300">Nossa lista é constantemente atualizada. Sempre que um fornecedor sai do ar, adicionamos novos imediatamente. Você recebe todas as atualizações gratuitamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-90">
+        <div class="max-w-5xl mx-auto content-layer text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 glow-text">NÃO PERCA ESSA OPORTUNIDADE DE GANHAR DINHEIRO COM O QUE AS PESSOAS MAIS USAM!</h2>
+            <p class="text-xl mb-8">Comece hoje mesmo e em poucos dias já pode estar lucrando.</p>
+            
+            <a href="#comprar" class="btn-primary text-white font-bold py-4 px-12 rounded-full text-xl inline-block">
+                <i class="fas fa-arrow-down mr-2"></i> GARANTIR MEU ACESSO
+            </a>
+            
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <div class="flex items-center">
+                    <i class="fas fa-lock text-blue-400 text-xl mr-2"></i>
+                    <span>Pagamento seguro</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-purple-400 text-xl mr-2"></i>
+                    <span>Garantia de 7 dias</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-headset text-pink-400 text-xl mr-2"></i>
+                    <span>Suporte 24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-4 sm:px-6 lg:px-8 bg-black">
+        <div class="max-w-7xl mx-auto content-layer">
+            <div class="text-center mb-8">
+                <p class="text-2xl font-bold text-white mb-3">LISTA BLACK DOS STREAMINGS PREMIUM</p>
+                <p class="text-gray-400">Transforme seu celular em uma máquina de renda extra</p>
+            </div>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-telegram text-2xl"></i>
+                </a>
+            </div>
+            
+            <div class="text-center text-sm text-gray-500">
+                <p>© 2023 Lista Black dos Streamings Premium. Todos os direitos reservados.</p>
+                <p class="mt-2">Este produto não é afiliado a nenhuma das plataformas mencionadas.</p>
+                <p class="mt-4">
+                    <a href="#" class="hover:text-white transition-colors">Termos de Uso</a> | 
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Profit Calculator
+        const clientRange = document.getElementById('clientRange');
+        const clientValue = document.getElementById('clientValue');
+        const serviceRange = document.getElementById('serviceRange');
+        const serviceValue = document.getElementById('serviceValue');
+        const profitValue = document.getElementById('profitValue');
+        
+        function updateProfit() {
+            const clients = parseInt(clientRange.value);
+            const services = parseInt(serviceRange.value);
+            const profit = clients * services * 12;
+            
+            clientValue.textContent = clients;
+            serviceValue.textContent = services;
+            profitValue.textContent = `R$${profit.toLocaleString('pt-BR')},00`;
+        }
+        
+        clientRange.addEventListener('input', updateProfit);
+        serviceRange.addEventListener('input', updateProfit);
+        
+        // FAQ Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=MichaelRodrigues/meu-espa-o" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
